@@ -1,7 +1,7 @@
 
 ## Description
 
-Presenting an open-source solution designed for effortless object manipulation within Three.js. This interactive tool empowers you to seamlessly modify objects by simply clicking and dragging on individual components of the gizmo. This solution offers three distinct modes: Move, Rotate, and Scale. 
+Presenting an open-source solution designed for effortless object manipulation within Three.js. This interactive tool empowers you to modify objects by simply clicking and dragging on individual components of the gizmo. This solution offers three distinct modes: Move, Rotate, and Scale. 
 
 
 Move:
