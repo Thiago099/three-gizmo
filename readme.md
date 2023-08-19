@@ -4,7 +4,7 @@
 ## Description
 
 This is an open source solution, to manipulate objects in three js.
-You can manipulate the objects, by clicking and dragging on each part of the gizmo, it will transform your object accordingly
+You can manipulate the objects, by clicking and dragging on each part of the gizmo, it will transform your object accordingly.
 It has three modes: Move, Rotate and Scale
 
 
@@ -22,7 +22,7 @@ Scale:
 
 ## Example
 
-Here is an example page, with this library applied:
+Here is an example page, with this library implemented:
 
 ![image](https://github.com/Thiago099/three-guizmo/assets/66787043/88c5d079-0944-4423-853c-5c21d8d803cc)
 
