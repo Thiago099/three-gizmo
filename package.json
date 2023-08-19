@@ -1,6 +1,6 @@
 {
   "name": "three-gizmo",
-  "version": "1.0.17",
+  "version": "1.0.20",
   "description": "",
   "main": "gizmo.js",
   "type": "module",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Thiago099/three-guizmo.git"
+    "url": "git+https://github.com/Thiago099/three-gizmo.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Thiago099/three-guizmo/issues"
+    "url": "https://github.com/Thiago099/three-gizmo/issues"
   },
-  "homepage": "https://github.com/Thiago099/three-guizmo#readme",
+  "homepage": "https://github.com/Thiago099/three-gizmo#readme",
   "peerDependencies": {
     "three": "^0.155.0"
   }
