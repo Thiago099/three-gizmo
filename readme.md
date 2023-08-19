@@ -40,7 +40,7 @@ Then you can import it like this:
 import { gizmo } from "three-gizmo";
 helper = gizmo(camera, renderer)
 ```
-To choose which type of transformation you can use
+To choose which type of transformation is active you can call these functions
 ```js
 helper.move()
 helper.rotate()
