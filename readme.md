@@ -47,7 +47,7 @@ helper.rotate()
 helper.scale()
 helper.none()
 ```
-For each transformation you can use to modify your objects:
+For each transformation you can use events to modify your objects:
 ```js
 helper.on("rotate", angle=>{
   // this function will be caleed during the rotation process
