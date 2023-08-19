@@ -119,6 +119,19 @@ function scale(canvas, camera, renderer, position, callback, endCallback)
             else
             {
                 const point = ray.snap(selectedAxis, position)
+                if(e.shiftKey)
+                {
+                    let avg = 0
+                    for(const axis of selectedAxis)
+                    {
+                        avg += point[axis]
+                    }
+                    avg /= selectedAxis.length
+                    for(const axis of selectedAxis)
+                    {
+                        point[axis] = avg
+                    }
+                }
                 previousDiff = {}
                 for(const axis of selectedAxis)
                 {
@@ -182,7 +195,6 @@ function scale(canvas, camera, renderer, position, callback, endCallback)
                     {
                         point[axis] = avg
                     }
-
                 }
                 for(const axis of selectedAxis)
                 {
