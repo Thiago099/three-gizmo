@@ -22,7 +22,7 @@ Scale:
 
 ## Example
 
-Here is an example page, with this library applied:
+Here is an example page, with this library implemented:
 
 ![image](https://github.com/Thiago099/three-guizmo/assets/66787043/88c5d079-0944-4423-853c-5c21d8d803cc)
 
