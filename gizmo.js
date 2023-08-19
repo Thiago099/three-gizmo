@@ -2,9 +2,9 @@ import * as THREE from 'three';
 import { move } from "./components/move";
 import { rotate } from "./components/rotate";
 import { scale } from "./components/scale";
-export { pivot }
+export { gizmo }
 export { setColor } from "./lib/colors"
-function pivot(canvas, camera, renderer)
+function gizmo(canvas, camera, renderer)
 {
     renderer.autoClear = false;
     

@@ -1,0 +1,26 @@
+{
+  "name": "three-gizmo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gizmo.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thiago099/three-guizmo.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Thiago099/three-guizmo/issues"
+  },
+  "homepage": "https://github.com/Thiago099/three-guizmo#readme",
+  "dependencies": {
+    "three": "^0.155.0"
+  }
+}
