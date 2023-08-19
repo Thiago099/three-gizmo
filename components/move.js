@@ -6,25 +6,25 @@ import { setMaterial } from '../lib/setMaterial';
 import { objectContains } from '../lib/objectContains';
 import { getColor } from '../lib/colors';
 
-import helperObj from "../assets/helper.obj?raw"
-import arrowObj from "../assets/arrow.obj?raw"
+import { Object } from '../lib/objects';
+
 function move(canvas, camera, renderer, position, callback, endCallback)
 {
     let active = false
     const pivotScene = new THREE.Scene();
-    const material1 = new THREE.MeshBasicMaterial({ color: getColor("color1")});
+    const material1 = new THREE.MeshBasicMaterial({ color: 0xff9999});
     const material2 = new THREE.MeshBasicMaterial({ color: getColor("color2")});
     const material3 = new THREE.MeshBasicMaterial({ color: getColor("color3") });
 
     const material4 = new THREE.MeshBasicMaterial({ color: getColor("hover")});
     
-    const x = parse(arrowObj)
+    const x = parse(Object("move_helper"))
 
     const y = x.clone()
     const z = x.clone()
 
     // x.children[0].geometry.translate(0,0,-1)
-    const xz =parse(helperObj)
+    const xz =parse(Object("generic_two_axis_helper"))
 
 
 

@@ -6,9 +6,7 @@ import { objectContains } from '../lib/objectContains';
 
 export { scale }
 import { getColor } from '../lib/colors';
-import helperObj from "../assets/helper.obj?raw"
-import allObj from "../assets/all.obj?raw"
-import scaleObj from "../assets/scale.obj?raw"
+import { Object } from '../lib/objects';
 function scale(canvas, camera, renderer, position, callback, endCallback)
 {
     const size = new THREE.Vector3(1,1,1)
@@ -23,8 +21,8 @@ function scale(canvas, camera, renderer, position, callback, endCallback)
     const material4 = new THREE.MeshBasicMaterial({ color: getColor("hover")});
 
     
-    const x = parse(scaleObj)
-    const all = parse(allObj)
+    const x = parse(Object("scale_helper"))
+    const all = parse(Object("scale_all_helper"))
 
     all.children[0].geometry.scale(1.3,1.3,1.3)
 
@@ -32,7 +30,7 @@ function scale(canvas, camera, renderer, position, callback, endCallback)
     const z = x.clone()
 
     // x.children[0].geometry.translate(0,0,-1)
-    const xz =parse(helperObj)
+    const xz =parse(Object("generic_two_axis_helper"))
 
 
 
@@ -172,6 +170,20 @@ function scale(canvas, camera, renderer, position, callback, endCallback)
             else
             {
                 const point = ray.snap(selectedAxis, position)
+                if(e.shiftKey)
+                {
+                    let avg = 0
+                    for(const axis of selectedAxis)
+                    {
+                        avg += point[axis]
+                    }
+                    avg /= selectedAxis.length
+                    for(const axis of selectedAxis)
+                    {
+                        point[axis] = avg
+                    }
+
+                }
                 for(const axis of selectedAxis)
                 {
                     size[axis] = Math.max(0,previousScale[axis] * (point[axis] - position[axis]) / previousDiff[axis])

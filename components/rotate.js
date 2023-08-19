@@ -8,11 +8,11 @@ import { objectContains } from '../lib/objectContains';
 export { rotate }
 import { getColor } from '../lib/colors';
 
-import circleObj from "../assets/circle.obj?raw"
+import { Object } from '../lib/objects';
 
 function rotate(canvas, camera, renderer, position, callback, endCallback)
 {
-    const rotation = new THREE.Vector3(0,0,0)
+    const rotation = new THREE.Euler(0,0,0)
 
     let active = false
     const pivotScene = new THREE.Scene();
@@ -23,7 +23,7 @@ function rotate(canvas, camera, renderer, position, callback, endCallback)
     const material4 = new THREE.MeshBasicMaterial({ color: getColor("hover") });
 
     
-    const xz = parse(circleObj)
+    const xz = parse(Object("rotate_helper"))
 
     const xy = xz.clone()
     const yz = xz.clone()

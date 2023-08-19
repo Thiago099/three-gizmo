@@ -4,7 +4,7 @@ import { rotate } from "./components/rotate";
 import { scale } from "./components/scale";
 export { gizmo }
 export { setColor } from "./lib/colors"
-function gizmo(canvas, camera, renderer)
+function gizmo(camera, renderer)
 {
     renderer.autoClear = false;
     
@@ -30,7 +30,7 @@ function gizmo(canvas, camera, renderer)
         position.copy(point)
     }
 
-    const scalePivot = scale(canvas, camera, renderer, position,x => events?.scale(x) , x=> events["end-scale"] && events["end-scale"](x) )
+    const scalePivot = scale(renderer.domElement, camera, renderer, position,x => events?.scale(x) , x=> events["end-scale"] && events["end-scale"](x) )
     
     helpers.push(scalePivot)
 
@@ -42,7 +42,7 @@ function gizmo(canvas, camera, renderer)
 
     object.setScale = (...props) => scalePivot.set(...props)
     
-    const movePivot = move(canvas, camera, renderer, position, x => {
+    const movePivot = move(renderer.domElement, camera, renderer, position, x => {
         position.copy(x)
         events?.move(x)
     }, x=> events["end-move"] && events["end-move"](x) )
@@ -59,7 +59,7 @@ function gizmo(canvas, camera, renderer)
 
 
     
-    const rotatePivot =rotate(canvas, camera, renderer, position, x => events?.rotate(x), x=>  events["end-rotation"] && events["end-rotation"](x) )
+    const rotatePivot =rotate(renderer.domElement, camera, renderer, position, x => events?.rotate(x), x=>  events["end-rotate"] && events["end-rotate"](x) )
     
     helpers.push(rotatePivot)
     object.rotate = () => {
