@@ -71,7 +71,7 @@ You can change the gizmo position by calling this method:
 ```js
 helper.setOrigin(position)
 ```
-This method returns if the mouse is over any of the helpers, this is useful to not take any other click action, if you are selecting a gizmo
+you can call the following method to check if the mouse is over any of the helpers, this is useful to not take any other click action, if you are selecting a gizmo
 
 ```js
 helper.isHover()
