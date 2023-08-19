@@ -3,7 +3,9 @@
 
 ## Description
 
-This is a open source solution, to manipulate objects in three js, it has three modes: Move, Rotate and Scale
+This is an open source solution, to manipulate objects in three js.
+You can manipulate the objects, by clicking and dragging on each part of the gizmo, it will transform your object accordingly
+It has three modes: Move, Rotate and Scale
 
 
 Move:
@@ -20,7 +22,7 @@ Scale:
 
 ## Example
 
-Here is a example page, with this library applied:
+Here is an example page, with this library applied:
 
 ![image](https://github.com/Thiago099/three-guizmo/assets/66787043/88c5d079-0944-4423-853c-5c21d8d803cc)
 
@@ -33,12 +35,12 @@ Install the package:
 ```
 npm i three-gizmo
 ```
-Then you can inport it like this:
+Then you can import it like this:
 ```js
 import { gizmo } from "three-gizmo";
 helper = gizmo(camera, renderer)
 ```
-To chose wich type of transformation you can use
+To choose which type of transformation you can use
 ```js
 helper.move()
 helper.rotate()
@@ -55,7 +57,7 @@ helper.on("end-rotate",angle=>{
 })
 ```
 
-the avaliable events are: scale, end-scale, move, end-move, rotate, end-rotate
+the available events are: scale, end-scale, move, end-move, rotate, end-rotate
 
 Finally, to render your gizmo after the render function you must call the gizmo render function:
 
@@ -64,19 +66,18 @@ renderer.render( scene, camera );
 helper.render()
 ```
 
-you can change the gizmo position by calling this method:
+You can change the gizmo position by calling this method:
 
 ```js
 helper.setOrigin(position)
 ```
-
-this method returns if the mouse is over any of the helpers, this is usefull to not take any other click action, if you are selecting a guzmo
+This method returns if the mouse is over any of the helpers, this is useful to not take any other click action, if you are selecting a gizmo
 
 ```js
 helper.isHover()
 ```
 
-you can customize you gizmo by using the setColor function
+You can customize your gizmo by using the setColor function
 
 ```js
 import { setColor } from "three-gizmo";
@@ -86,7 +87,7 @@ setColor("color3",0x0000ff)
 ```
 ![image](https://github.com/Thiago099/three-guizmo/assets/66787043/2a1c097a-4a46-4b8e-983d-6f859b413bd3)
 
-the supported parameters are
+The supported parameters are
 ```
 color1, color2, color3, color4 ,hover
 ```
